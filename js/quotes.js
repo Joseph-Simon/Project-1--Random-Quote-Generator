@@ -5,9 +5,9 @@ var quotes = [
     citation: "in Forrest Gump"
 },
 {
-    quote:"Go ahead make my day",
-    source:"Harry Callahan",
-    citation: "Sudden Impact"
+    quote:"You're going to need a bigger boat.",
+    source:"MartinBrody",
+    citation: "Jaws"
 },
 {
     quote:"The greatest trick the Devil ever pulled was convincing the world he didn't exist",
