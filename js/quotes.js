@@ -46,6 +46,12 @@ var quotes = [
     source:"John Bender",
     citation: "The Breakfast club",
     tag: "Movie"
+},
+{
+    quote:"Glory is fleeting, but obscurity is forever",
+    source:"Napoleon Bonaparte",
+    year: "1872-1970",
+    tag: "Historical"
 }
 
 ];

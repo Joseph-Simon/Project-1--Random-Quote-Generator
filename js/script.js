@@ -5,6 +5,7 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 //This function pulls a random quote from my array.
 function getRandomQuote(randomQuote){
     var randomQuote = quotes[Math.floor( Math.random() *  quotes.length )];
+//calls the background function evey time the page loads.
     randomBackgrounColor();
     return randomQuote;
 }
@@ -28,21 +29,21 @@ function printQuote(){
     return html;
   }
 
-//Function that changes the background color 
+//Function that randomly changes the background color.
   function randomBackgrounColor() {
     var r = Math.floor(Math.random() * 256);
     var b = Math.floor(Math.random() * 256);
     var g = Math.floor(Math.random() * 256);
     var backGroundColor= "rgb(" + r + "," + b + "," + g + ")";
   document.body.style.background = backGroundColor;
-    }
+  }
 
   
 
-//This is timer that will change the quote every 5 seconds.
-  setInterval(function(){ printQuote() }, 5000);
+//This is timer that will change the quote every 10 seconds.
+  setInterval(function(){ printQuote() }, 10000);
 
- //calls the background function evey time the page loads.
+ 
   
  
 
