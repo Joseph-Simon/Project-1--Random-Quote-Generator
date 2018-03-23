@@ -2,13 +2,13 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
-
+//This function pulls a random quote from my array.
 function getRandomQuote(randomQuote){
     var randomQuote = quotes[Math.floor( Math.random() *  quotes.length )];
     return randomQuote;
 }
 
+//Function pulls the random quote and prints it to the page in the proper formating.
 function printQuote(){
     randomQuote = getRandomQuote();
     html = '<p class="quote">' + randomQuote.quote + '</p>';
@@ -18,9 +18,6 @@ function printQuote(){
     }
     if (randomQuote.year) {
       html += '<span class="year">' + [randomQuote.year] + '</span>';
-    }
-    if (randomQuote.tag) {
-      html +='<span class="tag">' + [randomQuote.tag] + '</span>';
     }
     var div = document.getElementById('quote-box').innerHTML = html;
     return html;

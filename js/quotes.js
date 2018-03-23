@@ -1,6 +1,6 @@
 var quotes = [
 {
-    quote:"My Mama always said, 'Life was like a b ox of chocolates; you never know what you're going to get",
+    quote:"My Mama always said, 'Life was like a box of chocolates; you never know what you're going to get",
     source:"Forrest Gump",
     citation: "in Forrest Gump"
 },
