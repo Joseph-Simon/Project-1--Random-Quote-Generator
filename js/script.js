@@ -8,16 +8,20 @@ function getRandomQuote(randomQuote){
     return randomQuote;
 }
 
-//Function pulls the random quote and prints it to the page in the proper formating.
+/*Function pulls the random quote and prints it to the page in the proper formating only giving opitonal 
+data when necessary.*/
 function printQuote(){
     randomQuote = getRandomQuote();
     html = '<p class="quote">' + randomQuote.quote + '</p>';
     html += '<p class="source">' + randomQuote.source;
     if (randomQuote.citation) {
-      html += '<span class="citation">' + [randomQuote.citation] + '</span>';
+      html += '<span class="citation">' + randomQuote.citation + '</span>';
     }
     if (randomQuote.year) {
-      html += '<span class="year">' + [randomQuote.year] + '</span>';
+      html += '<span class="year">' + randomQuote.year + '</span>';
+    }
+    if (randomQuote.tag){
+      html += '<span class="tags">' + randomQuote.tag +'</span>';
     }
     var div = document.getElementById('quote-box').innerHTML = html;
     return html;
