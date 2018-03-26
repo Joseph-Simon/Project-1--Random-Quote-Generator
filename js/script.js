@@ -3,7 +3,7 @@
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 //This function pulls a random quote from my array.
-function getRandomQuote(randomQuote){
+function getRandomQuote(){
     var randomQuote = quotes[Math.floor( Math.random() *  quotes.length )];
 //calls the background function evey time the page loads.
     randomBackgrounColor();
@@ -13,7 +13,7 @@ function getRandomQuote(randomQuote){
 /*Function pulls the random quote and prints it to the page in the proper formating only giving opitonal 
 data when necessary.*/
 function printQuote(){
-    randomQuote = getRandomQuote();
+    var randomQuote = getRandomQuote();
     html = '<p class="quote">' + randomQuote.quote + '</p>';
     html += '<p class="source">' + randomQuote.source;
     if (randomQuote.citation) {
