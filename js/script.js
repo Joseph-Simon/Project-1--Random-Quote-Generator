@@ -3,8 +3,8 @@
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 //This function pulls a random quote from my array.
-function getRandomQuote(){
-    var randomQuote = quotes[Math.floor( Math.random() *  quotes.length )];
+const getRandomQuote = () => {
+    const randomQuote = quotes[Math.floor( Math.random() *  quotes.length )];
 //calls the background function evey time the page loads.
     randomBackgrounColor();
     return randomQuote;
@@ -13,28 +13,27 @@ function getRandomQuote(){
 /*Function pulls the random quote and prints it to the page in the proper formating only giving opitonal 
 data when necessary.*/
 function printQuote(){
-    var randomQuote = getRandomQuote();
-    html = '<p class="quote">' + randomQuote.quote + '</p>';
-    html += '<p class="source">' + randomQuote.source;
+    const randomQuote = getRandomQuote();
+    html = `'<p class="quote"> '${randomQuote.quote}' </p>''<p class="source">'${randomQuote.source}`;
     if (randomQuote.citation) {
-      html += '<span class="citation">' + randomQuote.citation + '</span>';
+      html += `<span class="citation">'${randomQuote.citation}'</span>`;
     }
     if (randomQuote.year) {
-      html += '<span class="year">' + randomQuote.year + '</span>';
+      html += `<span class="year">' ${randomQuote.year}'</span>`;
     }
     if (randomQuote.tag){
-      html += '<span class="tags">' + randomQuote.tag +'</span>';
+      html += `<span class="tags">' ${randomQuote.tag}'</span>`;
     }
-    var div = document.getElementById('quote-box').innerHTML = html;
+    const div = document.getElementById('quote-box').innerHTML = html;
     return html;
   }
 
 //Function that randomly changes the background color.
-  function randomBackgrounColor() {
-    var r = Math.floor(Math.random() * 256);
-    var b = Math.floor(Math.random() * 256);
-    var g = Math.floor(Math.random() * 256);
-    var backGroundColor= "rgb(" + r + "," + b + "," + g + ")";
+  const randomBackgrounColor = () => {
+    const r = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const backGroundColor=`rgb(${r},${g},${b})`
   document.body.style.background = backGroundColor;
   }
 
